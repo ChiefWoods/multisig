@@ -53,11 +53,6 @@ impl ProposeTransaction<'_> {
             transaction_types,
         });
 
-        msg!(
-            "transaction size: {}",
-            ctx.accounts.transaction.to_account_info().data_len()
-        );
-
         multisig.next_transaction_id += 1;
 
         Ok(())

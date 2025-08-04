@@ -52,8 +52,6 @@ pub struct Instruction {
 
 impl Instruction {
     pub fn space(accounts: &Vec<AccountMeta>, data: &Vec<u8>) -> usize {
-        msg!("accounts len: {}", accounts.len());
-        msg!("data len: {}", data.len());
         32 + (4 + accounts.len() * AccountMeta::INIT_SPACE) + (4 + data.len() * 1)
     }
 }
